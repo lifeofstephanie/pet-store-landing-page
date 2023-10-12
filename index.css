@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 5px;
+  box-sizing: border-box;
+  color: white;
+}
+body {
+  background-image: url("/images/small2.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+a {
+  text-decoration: none;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+}
+.home:hover,
+.about:hover,
+.adopt:hover,
+button:hover {
+  scale: 105%;
+  transition: all 0.4s ease-in;
+}
+.slogan {
+  margin: 240px 90px 0;
+  width: 400px;
+  font-family: "Times New Roman";
+  font-style: bold;
+  text-transform: uppercase;
+  /* color:green; */
+}
+.img {
+  border-radius: 71% 29% 37% 63% / 41% 51% 49% 59%;
+  margin: 240px 90px 0;
+  position: relative;
+  left: 10%;
+}
+.mid {
+  display: flex;
+  justify-content: space-between;
+}
+.button button {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+}
+.button button:nth-child(1) {
+  background: darkblue;
+  color: white;
+  border: none;
+  font-weight: bolder;
+  font-size: 13px;
+}
+.button button:nth-child(2) {
+  background: none;
+  border: 1px solid white;
+  font-weight: bolder;
+  font-size: 13px;
+}
+.button {
+  gap: 20px;
+  display: flex;
+  margin-top: 50px;
+  margin-left: 90px;
+}
+
+@media only screen and (max-width: 480px) and (min-width: 320px) {
+  .button {
+    margin-top: none;
+  }
+  .slogan {
+    margin-top: 120px;
+  }
+  .mid{
+    flex-direction: column;
+    gap: 100px;
+  }
+  .logo {
+    width: 30px;
+    height: 30px;
+  }
+  .img {
+    margin-top: 0;
+    height: 100%;
+  }
+  .button button:nth-child(2){
+    font-size: 15px;
+    border: 1px solid blue;
+    color: blue;
+  }
+  .button button:nth-child(1){
+    font-size: 15px;
+  }
+}
