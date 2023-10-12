@@ -10,10 +10,15 @@
   <body>
     <div class="header">
       <div style="display: flex">
-        <img src="/images/logo1.jpeg" alt="" width="30px"  class="logo"/>
+        <img src="/images/logo1.jpeg" alt="" width="30px" class="logo" />
         <h3>Pet Care</h3>
       </div>
-      <div class="head">
+      <div class="container" onclick="myfunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <div class="head dropdowncontent">
         <h4 class="home"><a href="">Home</a></h4>
         <h4 class="about"><a href="">About</a></h4>
         <h4 class="adopt"><a href="">Adopt</a></h4>
@@ -35,5 +40,11 @@
       <button>About Me</button>
       <button>Contact Now</button>
     </div>
+
+    <script>
+      function myFunction(x) {
+        x.classList.toggle("change");
+      }
+    </script>
   </body>
 </html>
