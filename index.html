@@ -13,19 +13,21 @@
         <img src="/images/logo1.jpeg" alt="" width="30px" class="logo" />
         <h3>Pet Care</h3>
       </div>
-      <div class="container" onclick="myfunction(this)">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </div>
-      <div class="head dropdowncontent">
-        <h4 class="home"><a href="">Home</a></h4>
-        <h4 class="about"><a href="">About</a></h4>
-        <h4 class="adopt"><a href="">Adopt</a></h4>
-        <h4 class="adopt"><a href="">Portfolio</a></h4>
-        <h4 class="adopt"><a href="">Testimonial</a></h4>
-        <h4 class="adopt"><a href="">Blog</a></h4>
-        <h4 class="adopt"><a href="">Contact</a></h4>
+      <div class="dropdown">
+        <div class="container" onclick="myfunction(this)">
+          <div class="bar1" onclick="drop()"></div>
+          <div class="bar2" onclick="drop()"></div>
+          <div class="bar3" onclick="drop()"></div>
+        </div>
+        <div class="head dropdowncontent" id="mydropdown">
+          <h4 class="home"><a href="">Home</a></h4>
+          <h4 class="about"><a href="">About</a></h4>
+          <h4 class="adopt"><a href="">Adopt</a></h4>
+          <h4 class="adopt"><a href="">Portfolio</a></h4>
+          <h4 class="adopt"><a href="">Testimonial</a></h4>
+          <h4 class="adopt"><a href="">Blog</a></h4>
+          <h4 class="adopt"><a href="">Contact</a></h4>
+        </div>
       </div>
     </div>
     <div class="mid">
@@ -45,6 +47,22 @@
       function myFunction(x) {
         x.classList.toggle("change");
       }
+      function drop() {
+        document.getElementById("mydropdown").classList.toggle("show");
+      }
+
+      window.onclick = function (event) {
+        if (!event.target.matches(".container")) {
+          var dropdowns = document.getElementsByClassName("dropdowncontent");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
     </script>
   </body>
 </html>
